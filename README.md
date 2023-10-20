@@ -33,4 +33,16 @@
 ### 如何获取阿里云盘TOKEN？
 - [https://alist.nn.ci/zh/guide/drivers/aliyundrive.html](https://alist.nn.ci/zh/guide/drivers/aliyundrive.html)
 
+**获取 refresh_token 并复制**
+
+- 自动获取: 登录[阿里云盘](https://www.aliyundrive.com/drive/)后，控制台粘贴
+```javascript
+copy(JSON.parse(localStorage.token).refresh_token); console.log(JSON.parse(localStorage.token).refresh_token);
+```
+`
+
+- 手动获取: 登录[阿里云盘](https://www.aliyundrive.com/drive/)后，可以在开发者工具 ->
+  Application -> Local Storage 中的 `token` 字段中找到。  
+  注意：不是复制整段 JSON 值，而是 JSON 里 `refresh_token` 字段的值，如下图所示红色部分：
+
 # 如侵权请联系本人删除
